@@ -1,0 +1,42 @@
+##gff-version 3
+##sequence-region chr1 1 50000
+# Sample GFF3 file for testing the genomic browser
+# Contains genes, mRNAs, exons, and CDSs with proper parent-child relationships
+
+chr1	RefSeq	gene	1000	9000	.	+	.	ID=gene001;Name=BRCA1;biotype=protein_coding
+chr1	RefSeq	mRNA	1000	9000	.	+	.	ID=mRNA001;Parent=gene001;Name=BRCA1-transcript1
+chr1	RefSeq	exon	1000	1500	.	+	.	ID=exon001;Parent=mRNA001
+chr1	RefSeq	CDS	1200	1500	.	+	0	ID=cds001;Parent=mRNA001
+chr1	RefSeq	exon	3000	3800	.	+	.	ID=exon002;Parent=mRNA001
+chr1	RefSeq	CDS	3000	3800	.	+	2	ID=cds002;Parent=mRNA001
+chr1	RefSeq	exon	5000	5500	.	+	.	ID=exon003;Parent=mRNA001
+chr1	RefSeq	CDS	5000	5400	.	+	1	ID=cds003;Parent=mRNA001
+
+chr1	RefSeq	gene	12000	20000	.	-	.	ID=gene002;Name=TP53;biotype=protein_coding
+chr1	RefSeq	mRNA	12000	20000	.	-	.	ID=mRNA002;Parent=gene002;Name=TP53-transcript1
+chr1	RefSeq	exon	12000	13000	.	-	.	ID=exon004;Parent=mRNA002
+chr1	RefSeq	CDS	12000	13000	.	-	0	ID=cds004;Parent=mRNA002
+chr1	RefSeq	exon	15000	16000	.	-	.	ID=exon005;Parent=mRNA002
+chr1	RefSeq	CDS	15000	16000	.	-	1	ID=cds005;Parent=mRNA002
+chr1	RefSeq	exon	18000	20000	.	-	.	ID=exon006;Parent=mRNA002
+chr1	RefSeq	CDS	18100	20000	.	-	0	ID=cds006;Parent=mRNA002
+
+chr1	RefSeq	gene	25000	35000	.	+	.	ID=gene003;Name=EGFR;biotype=protein_coding
+chr1	RefSeq	mRNA	25000	35000	.	+	.	ID=mRNA003;Parent=gene003;Name=EGFR-transcript1
+chr1	RefSeq	exon	25000	26000	.	+	.	ID=exon007;Parent=mRNA003
+chr1	RefSeq	CDS	25200	26000	.	+	0	ID=cds007;Parent=mRNA003
+chr1	RefSeq	exon	28000	29000	.	+	.	ID=exon008;Parent=mRNA003
+chr1	RefSeq	CDS	28000	29000	.	+	1	ID=cds008;Parent=mRNA003
+chr1	RefSeq	exon	31000	32000	.	+	.	ID=exon009;Parent=mRNA003
+chr1	RefSeq	CDS	31000	32000	.	+	2	ID=cds009;Parent=mRNA003
+chr1	RefSeq	exon	33500	35000	.	+	.	ID=exon010;Parent=mRNA003
+chr1	RefSeq	CDS	33500	34800	.	+	0	ID=cds010;Parent=mRNA003
+
+chr1	RefSeq	gene	40000	48000	.	-	.	ID=gene004;Name=MYC;biotype=protein_coding
+chr1	RefSeq	mRNA	40000	48000	.	-	.	ID=mRNA004;Parent=gene004;Name=MYC-transcript1
+chr1	RefSeq	exon	40000	41500	.	-	.	ID=exon011;Parent=mRNA004
+chr1	RefSeq	CDS	40200	41500	.	-	0	ID=cds011;Parent=mRNA004
+chr1	RefSeq	exon	43000	44000	.	-	.	ID=exon012;Parent=mRNA004
+chr1	RefSeq	CDS	43000	44000	.	-	2	ID=cds012;Parent=mRNA004
+chr1	RefSeq	exon	46000	48000	.	-	.	ID=exon013;Parent=mRNA004
+chr1	RefSeq	CDS	46000	47800	.	-	1	ID=cds013;Parent=mRNA004

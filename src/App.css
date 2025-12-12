@@ -1,0 +1,167 @@
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.app-header {
+    background: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--spacing-md) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(20px);
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-md);
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    color: var(--color-text-tertiary);
+    margin: 0;
+}
+
+/* Main Content */
+.app-main {
+    flex: 1;
+    padding: var(--spacing-xl) 0;
+}
+
+.browser-container {
+    animation: slideIn var(--transition-base);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.file-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.file-badge svg {
+    color: var(--color-accent-primary);
+}
+
+.warning-message {
+    background: hsla(35, 95%, 60%, 0.1);
+    border: 1px solid var(--color-accent-warning);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    color: var(--color-accent-warning);
+}
+
+.warning-message h4 {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1rem;
+}
+
+.warning-message p {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.warning-message ul {
+    margin-left: var(--spacing-lg);
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+}
+
+.warning-message li {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Footer */
+.app-footer {
+    background: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+    padding: var(--spacing-lg) 0;
+    margin-top: var(--spacing-2xl);
+}
+
+.app-footer p {
+    text-align: center;
+    color: var(--color-text-tertiary);
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.developer-credit {
+    margin-top: var(--spacing-sm) !important;
+    font-weight: 500;
+    background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .app-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .browser-info {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .legend {
+        justify-content: center;
+    }
+}
